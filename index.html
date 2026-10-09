@@ -251,7 +251,6 @@
       animation: fadeUp 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
       overflow: hidden;
       cursor: pointer;
-      border-width: 1px;
     }
 
     .btn::before {
@@ -492,15 +491,16 @@
     .menu-modal-backdrop {
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.94);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
+      background: rgba(0, 0, 0, 0.95);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       z-index: 9999;
       display: none;
       opacity: 0;
       transition: opacity 0.25s ease;
       flex-direction: column;
       overflow: hidden;
+      touch-action: pan-y pinch-zoom;
     }
 
     .menu-modal-backdrop.open {
@@ -510,12 +510,12 @@
 
     .menu-modal-header {
       width: 100%;
-      padding: 16px 20px;
+      padding: 14px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      background: rgba(14, 14, 18, 0.85);
+      background: rgba(14, 14, 18, 0.88);
       backdrop-filter: blur(12px);
       z-index: 10;
       flex-shrink: 0;
@@ -561,11 +561,13 @@
       justify-content: center;
       cursor: pointer;
       transition: all 0.2s ease;
+      text-decoration: none;
     }
 
     .modal-action-btn:hover {
       background: rgba(255, 255, 255, 0.2);
       transform: scale(1.05);
+      color: #ffffff;
     }
 
     .modal-action-btn svg {
@@ -579,103 +581,35 @@
       align-items: center;
       justify-content: center;
       position: relative;
-      overflow: hidden;
-      padding: 14px;
+      overflow: auto;
+      padding: 12px;
       user-select: none;
     }
 
     .menu-slide {
-      width: 100%;
-      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: opacity 0.2s ease;
     }
 
     .menu-img {
       max-width: 100%;
-      max-height: calc(100vh - 180px);
+      max-height: calc(100vh - 170px);
       object-fit: contain;
       border-radius: 12px;
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.85);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.9);
       cursor: zoom-in;
-      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .menu-img.zoomed {
       cursor: zoom-out;
-      transform: scale(1.75);
-    }
-
-    /* Sleek placeholder card shown when local image is pending */
-    .menu-placeholder-card {
-      width: 330px;
-      max-width: 88vw;
-      min-height: 440px;
-      max-height: calc(100vh - 200px);
-      background: linear-gradient(145deg, #181820, #101015);
-      border: 1px solid rgba(245, 158, 11, 0.35);
-      border-radius: 20px;
-      padding: 26px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.85);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .menu-placeholder-card::before {
-      content: '';
-      position: absolute;
-      top: -40px;
-      width: 160px;
-      height: 160px;
-      background: radial-gradient(circle, rgba(245, 158, 11, 0.25) 0%, transparent 70%);
-      border-radius: 50%;
-    }
-
-    .menu-placeholder-card .page-num-circle {
-      width: 72px;
-      height: 72px;
-      border-radius: 50%;
-      background: rgba(245, 158, 11, 0.15);
-      border: 2px solid rgba(245, 158, 11, 0.4);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 32px;
-      font-weight: 800;
-      color: #fbbf24;
-      margin-bottom: 16px;
-      box-shadow: 0 0 24px rgba(245, 158, 11, 0.2);
-    }
-
-    .menu-placeholder-card .card-heading {
-      font-size: 20px;
-      font-weight: 800;
-      color: #ffffff;
-      margin-bottom: 8px;
-    }
-
-    .menu-placeholder-card .card-sub {
-      font-size: 13px;
-      color: var(--muted);
-      line-height: 1.5;
-      margin-bottom: 18px;
-      max-width: 260px;
-    }
-
-    .menu-placeholder-card .filename-pill {
-      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-      font-size: 12px;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px dashed rgba(245, 158, 11, 0.45);
-      padding: 6px 14px;
-      border-radius: 8px;
-      color: #fbbf24;
+      transform: scale(1.8);
+      max-height: none;
+      max-width: none;
     }
 
     .nav-btn {
@@ -685,8 +619,8 @@
       width: 48px;
       height: 48px;
       border-radius: 50%;
-      background: rgba(20, 20, 26, 0.8);
-      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(20, 20, 26, 0.82);
+      border: 1px solid rgba(255, 255, 255, 0.16);
       color: #ffffff;
       display: flex;
       align-items: center;
@@ -720,27 +654,27 @@
     .menu-thumbnails-bar {
       width: 100%;
       padding: 12px 16px 18px;
-      background: rgba(14, 14, 18, 0.85);
+      background: rgba(14, 14, 18, 0.92);
       border-top: 1px solid rgba(255, 255, 255, 0.08);
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
+      gap: 10px;
       overflow-x: auto;
       flex-shrink: 0;
       z-index: 10;
     }
 
     .thumb-item {
-      width: 38px;
-      height: 48px;
+      width: 42px;
+      height: 54px;
       border-radius: 8px;
       border: 2px solid rgba(255, 255, 255, 0.15);
       background: #1c1c24;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 700;
       color: var(--muted);
       cursor: pointer;
@@ -754,11 +688,13 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      display: block;
     }
 
     .thumb-item:hover {
       border-color: rgba(245, 158, 11, 0.6);
       color: #ffffff;
+      transform: translateY(-1px);
     }
 
     .thumb-item.active {
@@ -766,7 +702,20 @@
       background: rgba(245, 158, 11, 0.2);
       color: #fbbf24;
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+    }
+
+    .thumb-number-overlay {
+      position: absolute;
+      bottom: 2px;
+      right: 2px;
+      background: rgba(0, 0, 0, 0.7);
+      font-size: 10px;
+      font-weight: 800;
+      color: #fff;
+      padding: 1px 4px;
+      border-radius: 4px;
+      line-height: 1.1;
     }
 
     .swipe-hint {
@@ -776,21 +725,24 @@
       transform: translateX(-50%);
       font-size: 11px;
       font-weight: 600;
-      color: rgba(255, 255, 255, 0.5);
+      color: rgba(255, 255, 255, 0.55);
       pointer-events: none;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 4px 12px;
+      background: rgba(0, 0, 0, 0.65);
+      padding: 4px 14px;
       border-radius: 999px;
       letter-spacing: 0.3px;
     }
 
     @media (max-width: 600px) {
       .nav-btn {
-        width: 42px;
-        height: 42px;
+        width: 40px;
+        height: 40px;
       }
       .nav-btn.prev { left: 8px; }
       .nav-btn.next { right: 8px; }
+      .menu-img {
+        max-height: calc(100vh - 160px);
+      }
     }
   </style>
 </head>
@@ -802,7 +754,7 @@
   <div class="avatar-container">
     <div class="avatar">
       <div class="avatar-inner" id="avatar">
-        <!-- Default Logo Graphic: Fast Food Chicken & Bull Motif -->
+        <!-- Logo Graphic: Fast Food Chicken & Bull Motif -->
         <svg class="avatar-badge-svg" viewBox="0 0 48 48" fill="none">
           <path d="M14 12C14 12 11 19 14 25C15.5 28 19 30 24 30C29 30 32.5 28 34 25C37 19 34 12 34 12C34 12 31 16 28 16C25.5 16 24 14 24 14C24 14 22.5 16 20 16C17 16 14 12 14 12Z" fill="url(#avatarGrad)" />
           <path d="M19 15C19 12 21 8 24 7C27 8 29 12 29 15C29 17 27 18 24 18C21 18 19 17 19 15Z" fill="#ff5722"/>
@@ -877,6 +829,13 @@
           <line x1="8" y1="11" x2="14" y2="11"></line>
         </svg>
       </button>
+      <a class="modal-action-btn" id="openExternalBtn" title="Open Full Image" aria-label="Open Full Image" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+          <polyline points="15 3 21 3 21 9"></polyline>
+          <line x1="10" y1="14" x2="21" y2="3"></line>
+        </svg>
+      </a>
       <button class="modal-action-btn" id="closeModalBtn" title="Close Menu (Esc)" aria-label="Close Menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
           <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -903,7 +862,7 @@
       </svg>
     </button>
 
-    <div class="swipe-hint" id="swipeHint">Swipe or click thumbnails below</div>
+    <div class="swipe-hint" id="swipeHint">Swipe or use arrows to view all 8 pages</div>
   </div>
 
   <div class="menu-thumbnails-bar" id="thumbnailsBar">
@@ -919,29 +878,28 @@
   // 2. Instagram: https://www.instagram.com/clucksnbulls?obrf=em5uaTB1eGg1emho
   // 3. TikTok: https://www.tiktok.com/@clucksnbulls?_r=1&_t=ZS-9APeAulvzVM
   // 4. Facebook: https://www.facebook.com/share/19e95nGdXj/
-  // 5. Menu: 8 images viewer
+  // 5. Menu: 8 images viewer from menu/ folder
   // =========================================================================
   const profile = {
     businessName: "Clucks n Bulls",
     tagline: "Gourmet Burgers, Crispy Broast & Fast Food",
-    photoUrl: "", // Optional custom avatar logo URL e.g. "images/logo.png"
+    photoUrl: "", 
     links: {
       whatsapp: "https://wa.me/923350334656",
       instagram: "https://www.instagram.com/clucksnbulls?obrf=em5uaTB1eGg1emho",
       tiktok: "https://www.tiktok.com/@clucksnbulls?_r=1&_t=ZS-9APeAulvzVM",
       facebook: "https://www.facebook.com/share/19e95nGdXj/"
     },
-    // Array of 8 menu images
-    // When you send the images, drop them in images/menu-1.jpg ... images/menu-8.jpg
+    // The 8 official menu images in menu/
     menuImages: [
-      "images/menu-1.jpg",
-      "images/menu-2.jpg",
-      "images/menu-3.jpg",
-      "images/menu-4.jpg",
-      "images/menu-5.jpg",
-      "images/menu-6.jpg",
-      "images/menu-7.jpg",
-      "images/menu-8.jpg"
+      "menu/menu-1.jpg",
+      "menu/menu-2.jpg",
+      "menu/menu-3.jpg",
+      "menu/menu-4.jpg",
+      "menu/menu-5.jpg",
+      "menu/menu-6.jpg",
+      "menu/menu-7.jpg",
+      "menu/menu-8.jpg"
     ]
   };
 
@@ -1029,7 +987,7 @@
   `;
   linksContainer.appendChild(fbBtn);
 
-  // 5. Menu Button (At last comes the menu which when clicked opens the 8 images)
+  // 5. Menu Button (At last comes the menu which opens the 8 images)
   const menuBtn = document.createElement('button');
   menuBtn.type = "button";
   menuBtn.className = "btn menu-btn";
@@ -1038,7 +996,7 @@
       <div class="icon-wrapper">${icons.menu}</div>
       <div class="btn-text-group">
         <span class="btn-title">View Full Menu <span class="badge-pill">8 Pages</span></span>
-        <span class="btn-subtitle">Burgers, Broast, Pizzas & More</span>
+        <span class="btn-subtitle">Burgers, Broast, Pizzas & Deals</span>
       </div>
     </div>
     ${arrowSvg}
@@ -1056,6 +1014,7 @@
   const slideContainer = document.getElementById('menuSlideContainer');
   const thumbnailsBar = document.getElementById('thumbnailsBar');
   const zoomToggleBtn = document.getElementById('zoomToggleBtn');
+  const openExternalBtn = document.getElementById('openExternalBtn');
   const viewport = document.getElementById('menuViewport');
 
   let currentIndex = 0;
@@ -1077,19 +1036,45 @@
   }
   closeModalBtn.addEventListener('click', closeModal);
 
+  // Helper to load image with fallback between menu/ and images/
+  function getCandidateUrls(index) {
+    return [
+      profile.menuImages[index],
+      `images/menu-${index + 1}.jpg`,
+      `menu/menu-${index + 1}.jpg`
+    ];
+  }
+
+  // Preload all 8 images in the background for instant transitions
+  const preloadedImages = [];
+  function preloadAll() {
+    for (let i = 0; i < totalPages; i++) {
+      const img = new Image();
+      img.src = profile.menuImages[i];
+      preloadedImages.push(img);
+    }
+  }
+  preloadAll();
+
   // Render Thumbnails
   for (let i = 0; i < totalPages; i++) {
     const thumb = document.createElement('div');
     thumb.className = `thumb-item ${i === 0 ? 'active' : ''}`;
     thumb.dataset.index = i;
-    thumb.innerHTML = `<span>${i + 1}</span>`;
     
-    // Check if image exists
-    const testImg = new Image();
-    testImg.src = profile.menuImages[i];
-    testImg.onload = () => {
-      thumb.innerHTML = `<img src="${profile.menuImages[i]}" alt="Page ${i + 1}">`;
+    const thumbImg = document.createElement('img');
+    thumbImg.src = profile.menuImages[i];
+    thumbImg.alt = `Page ${i + 1}`;
+    thumbImg.onerror = () => {
+      thumbImg.src = `images/menu-${i + 1}.jpg`;
     };
+
+    const numBadge = document.createElement('span');
+    numBadge.className = 'thumb-number-overlay';
+    numBadge.textContent = i + 1;
+
+    thumb.appendChild(thumbImg);
+    thumb.appendChild(numBadge);
 
     thumb.addEventListener('click', () => {
       currentIndex = i;
@@ -1115,27 +1100,26 @@
 
     slideContainer.innerHTML = '';
 
-    const imgSrc = profile.menuImages[index];
     const img = new Image();
-    img.src = imgSrc;
+    const candidates = getCandidateUrls(index);
+    let candidateIdx = 0;
+
+    img.src = candidates[candidateIdx];
     img.className = 'menu-img';
     img.alt = `Clucks n Bulls Menu - Page ${index + 1}`;
 
     img.onload = () => {
       slideContainer.innerHTML = '';
       slideContainer.appendChild(img);
+      openExternalBtn.href = img.src;
       img.addEventListener('click', toggleZoom);
     };
 
     img.onerror = () => {
-      slideContainer.innerHTML = `
-        <div class="menu-placeholder-card">
-          <div class="page-num-circle">${index + 1}</div>
-          <div class="card-heading">Menu Page ${index + 1} of ${totalPages}</div>
-          <div class="card-sub">Waiting for your 8 menu photos. Send them in chat to see them live here!</div>
-          <div class="filename-pill">${profile.menuImages[index]}</div>
-        </div>
-      `;
+      candidateIdx++;
+      if (candidateIdx < candidates.length) {
+        img.src = candidates[candidateIdx];
+      }
     };
   }
 
@@ -1187,11 +1171,11 @@
   }, { passive: true });
 
   function handleGesture() {
-    const swipeThreshold = 50;
+    const swipeThreshold = 45;
     if (touchEndX < touchStartX - swipeThreshold) {
-      goToNext();
+      goToNext(); // Swipe left -> Next
     } else if (touchEndX > touchStartX + swipeThreshold) {
-      goToPrev();
+      goToPrev(); // Swipe right -> Prev
     }
   }
 </script>
