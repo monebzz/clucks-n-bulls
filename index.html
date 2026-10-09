@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>Clucks n Bulls | Official Links & Digital Menu</title>
+  <meta name="description" content="Official links and complete 8-page digital menu for Clucks n Bulls fast-food restaurant in Gulshan-e-Hadeed, Karachi. Order via WhatsApp, follow on Instagram, TikTok & Facebook.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-base: #09090c;
+      --bg-surface: #131318;
+      --bg-glow: rgba(245, 158, 11, 0.12);
+      --bg-glow-secondary: rgba(239, 68, 68, 0.08);
+      --card: rgba(20, 20, 26, 0.85);
+      --card-hover: rgba(28, 28, 36, 0.96);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --card-border-hover: rgba(245, 158, 11, 0.5);
+      --text: #f9fafb;
+      --muted: #9ca3af;
+      --accent: #f59e0b;
+      --accent-light: #fbbf24;
+      --accent-red: #ef4444;
+      --accent-gradient: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #dc2626 100%);
+      --accent-glow: rgba(245, 158, 11, 0.35);
+      --accent-text: #09090b;
+      --whatsapp-color: #25D366;
+      --whatsapp-glow: rgba(37, 211, 102, 0.25);
+      --instagram-glow: rgba(225, 48, 108, 0.25);
+      --tiktok-glow: rgba(0, 242, 254, 0.25);
+      --facebook-glow: rgba(24, 119, 242, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      background-color: var(--bg-base);
+      background-image: 
+        radial-gradient(ellipse 85% 55% at 50% -12%, var(--bg-glow) 0%, transparent 70%),
+        radial-gradient(circle 380px at 85% 65%, var(--bg-glow-secondary) 0%, transparent 60%),
+        radial-gradient(circle 380px at 15% 35%, rgba(245, 158, 11, 0.06) 0%, transparent 60%);
+      background-attachment: fixed;
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      min-height: 100%;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      padding: env(safe-area-inset-top, 0) env(safe-area-inset-right, 0) env(safe-area-inset-bottom, 0) env(safe-area-inset-left, 0);
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 440px;
+      min-height: 100vh;
+      padding: 48px 20px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+
+    /* Ambient top glow */
+    .wrap::before {
+      content: '';
+      position: absolute;
+      top: 15px;
+      width: 260px;
+      height: 260px;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.2) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+      filter: blur(24px);
+    }
+
+    .avatar-container {
+      position: relative;
+      z-index: 1;
+      opacity: 0;
+      animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .avatar {
+      width: 106px;
+      height: 106px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #1c1c22, #0d0d10);
+      position: relative;
+      padding: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 32px -4px rgba(0,0,0,0.85), 0 0 28px var(--accent-glow);
+    }
+
+    .avatar::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      padding: 2.5px;
+      background: var(--accent-gradient);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .avatar-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #111115;
+    }
+
+    .avatar-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .avatar-badge-svg {
+      width: 60px;
+      height: 60px;
+      color: var(--accent);
+    }
+
+    h1 {
+      margin-top: 18px;
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.4px;
+      text-align: center;
+      color: #ffffff;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      opacity: 0;
+      animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      animation-delay: 0.08s;
+    }
+
+    .verified-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #fbbf24;
+      width: 20px;
+      height: 20px;
+    }
+
+    .tagline {
+      margin-top: 6px;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--muted);
+      text-align: center;
+      line-height: 1.5;
+      max-width: 330px;
+      z-index: 1;
+      opacity: 0;
+      animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      animation-delay: 0.14s;
+    }
+
+    .meta-badges {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 10px;
+      z-index: 1;
+      opacity: 0;
+      animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      animation-delay: 0.18s;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .meta-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 11px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 11.5px;
+      font-weight: 600;
+      color: #d1d5db;
+    }
+
+    .meta-pill svg {
+      width: 12px;
+      height: 12px;
+      color: var(--accent);
+    }
+
+    .links {
+      width: 100%;
+      margin-top: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+      z-index: 1;
+    }
+
+    .btn {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      min-height: 62px;
+      padding: 0 18px;
+      border-radius: 18px;
+      background: var(--card);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--card-border);
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), 
+                  box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1), 
+                  border-color 0.22s ease,
+                  background 0.22s ease;
+      opacity: 0;
+      animation: fadeUp 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      overflow: hidden;
+      cursor: pointer;
+      border-width: 1px;
+    }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      opacity: 0.8;
+    }
+
+    .btn-content {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      z-index: 1;
+      flex: 1;
+    }
+
+    .icon-wrapper {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      transition: transform 0.22s ease;
+    }
+
+    .icon-wrapper svg {
+      width: 22px;
+      height: 22px;
+      display: block;
+    }
+
+    .btn-text-group {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      text-align: left;
+    }
+
+    .btn-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.2px;
+      display: flex;
+      align-items: center;
+    }
+
+    .btn-subtitle {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--muted);
+    }
+
+    .arrow {
+      width: 18px;
+      height: 18px;
+      color: rgba(255, 255, 255, 0.35);
+      flex-shrink: 0;
+      transition: transform 0.22s ease, color 0.22s ease;
+      z-index: 1;
+    }
+
+    .btn:hover {
+      background: var(--card-hover);
+      border-color: var(--card-border-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px -6px rgba(0,0,0,0.7), 0 0 20px rgba(245, 158, 11, 0.15);
+    }
+
+    .btn:hover .icon-wrapper {
+      transform: scale(1.06);
+    }
+
+    .btn:hover .arrow {
+      color: var(--accent);
+      transform: translateX(3px);
+    }
+
+    .btn:active {
+      transform: scale(0.985);
+    }
+
+    /* 1. WhatsApp Button */
+    .btn.whatsapp .icon-wrapper {
+      color: var(--whatsapp-color);
+      background: rgba(37, 211, 102, 0.12);
+      border-color: rgba(37, 211, 102, 0.25);
+    }
+    .btn.whatsapp:hover {
+      border-color: rgba(37, 211, 102, 0.45);
+      box-shadow: 0 12px 28px -6px rgba(0,0,0,0.7), 0 0 20px var(--whatsapp-glow);
+    }
+    .btn.whatsapp:hover .arrow {
+      color: var(--whatsapp-color);
+    }
+
+    /* 2. Instagram Button */
+    .btn.instagram .icon-wrapper {
+      color: #e1306c;
+      background: rgba(225, 48, 108, 0.12);
+      border-color: rgba(225, 48, 108, 0.25);
+    }
+    .btn.instagram:hover {
+      border-color: rgba(225, 48, 108, 0.45);
+      box-shadow: 0 12px 28px -6px rgba(0,0,0,0.7), 0 0 20px var(--instagram-glow);
+    }
+    .btn.instagram:hover .arrow {
+      color: #e1306c;
+    }
+
+    /* 3. TikTok Button */
+    .btn.tiktok .icon-wrapper {
+      color: #00f2fe;
+      background: rgba(0, 242, 254, 0.10);
+      border-color: rgba(0, 242, 254, 0.22);
+    }
+    .btn.tiktok:hover {
+      border-color: rgba(0, 242, 254, 0.45);
+      box-shadow: 0 12px 28px -6px rgba(0,0,0,0.7), 0 0 20px var(--tiktok-glow);
+    }
+    .btn.tiktok:hover .arrow {
+      color: #00f2fe;
+    }
+
+    /* 4. Facebook Button */
+    .btn.facebook .icon-wrapper {
+      color: #1877f2;
+      background: rgba(24, 119, 242, 0.12);
+      border-color: rgba(24, 119, 242, 0.25);
+    }
+    .btn.facebook:hover {
+      border-color: rgba(24, 119, 242, 0.45);
+      box-shadow: 0 12px 28px -6px rgba(0,0,0,0.7), 0 0 20px var(--facebook-glow);
+    }
+    .btn.facebook:hover .arrow {
+      color: #1877f2;
+    }
+
+    /* 5. Menu Button (Featured Highlight) */
+    .btn.menu-btn {
+      background: linear-gradient(135deg, rgba(38, 26, 18, 0.95), rgba(24, 20, 26, 0.92));
+      border: 1px solid rgba(245, 158, 11, 0.45);
+      box-shadow: 0 8px 24px rgba(245, 158, 11, 0.15);
+      position: relative;
+    }
+    .btn.menu-btn::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 18px;
+      background: var(--accent-gradient);
+      opacity: 0.08;
+      pointer-events: none;
+      transition: opacity 0.22s ease;
+    }
+    .btn.menu-btn .icon-wrapper {
+      color: #fbbf24;
+      background: rgba(245, 158, 11, 0.2);
+      border-color: rgba(245, 158, 11, 0.4);
+    }
+    .btn.menu-btn:hover {
+      border-color: #f59e0b;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(245, 158, 11, 0.35);
+    }
+    .btn.menu-btn:hover::after {
+      opacity: 0.18;
+    }
+    .badge-pill {
+      font-size: 10.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: var(--accent-gradient);
+      color: #09090b;
+      margin-left: 8px;
+      display: inline-block;
+    }
+
+    /* Staggered entry */
+    .links .btn:nth-child(1) { animation-delay: 0.20s; }
+    .links .btn:nth-child(2) { animation-delay: 0.26s; }
+    .links .btn:nth-child(3) { animation-delay: 0.32s; }
+    .links .btn:nth-child(4) { animation-delay: 0.38s; }
+    .links .btn:nth-child(5) { animation-delay: 0.44s; }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .footer {
+      margin-top: auto;
+      padding-top: 44px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s ease, transform 0.2s ease;
+      opacity: 0;
+      animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      animation-delay: 0.52s;
+      z-index: 1;
+    }
+
+    .footer:hover {
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    .footer b {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* =========================================================================
+       MENU MODAL / LIGHTBOX VIEWER
+       ========================================================================= */
+    .menu-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      z-index: 9999;
+      display: none;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .menu-modal-backdrop.open {
+      display: flex;
+      opacity: 1;
+    }
+
+    .menu-modal-header {
+      width: 100%;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(14, 14, 18, 0.85);
+      backdrop-filter: blur(12px);
+      z-index: 10;
+      flex-shrink: 0;
+    }
+
+    .modal-title-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .modal-title-text {
+      font-size: 16px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .modal-counter-badge {
+      font-size: 12px;
+      font-weight: 700;
+      color: #fbbf24;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      padding: 3px 10px;
+      border-radius: 999px;
+    }
+
+    .modal-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .modal-action-btn {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .modal-action-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.05);
+    }
+
+    .modal-action-btn svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .menu-viewport {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      padding: 14px;
+      user-select: none;
+    }
+
+    .menu-slide {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .menu-img {
+      max-width: 100%;
+      max-height: calc(100vh - 180px);
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.85);
+      cursor: zoom-in;
+      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .menu-img.zoomed {
+      cursor: zoom-out;
+      transform: scale(1.75);
+    }
+
+    /* Sleek placeholder card shown when local image is pending */
+    .menu-placeholder-card {
+      width: 330px;
+      max-width: 88vw;
+      min-height: 440px;
+      max-height: calc(100vh - 200px);
+      background: linear-gradient(145deg, #181820, #101015);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      border-radius: 20px;
+      padding: 26px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.85);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .menu-placeholder-card::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.25) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .menu-placeholder-card .page-num-circle {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: rgba(245, 158, 11, 0.15);
+      border: 2px solid rgba(245, 158, 11, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      font-weight: 800;
+      color: #fbbf24;
+      margin-bottom: 16px;
+      box-shadow: 0 0 24px rgba(245, 158, 11, 0.2);
+    }
+
+    .menu-placeholder-card .card-heading {
+      font-size: 20px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .menu-placeholder-card .card-sub {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-bottom: 18px;
+      max-width: 260px;
+    }
+
+    .menu-placeholder-card .filename-pill {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 12px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px dashed rgba(245, 158, 11, 0.45);
+      padding: 6px 14px;
+      border-radius: 8px;
+      color: #fbbf24;
+    }
+
+    .nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(20, 20, 26, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      transition: all 0.2s ease;
+      backdrop-filter: blur(8px);
+    }
+
+    .nav-btn:hover {
+      background: #f59e0b;
+      border-color: #f59e0b;
+      color: #09090b;
+      transform: translateY(-50%) scale(1.08);
+    }
+
+    .nav-btn.prev {
+      left: 14px;
+    }
+
+    .nav-btn.next {
+      right: 14px;
+    }
+
+    .nav-btn svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .menu-thumbnails-bar {
+      width: 100%;
+      padding: 12px 16px 18px;
+      background: rgba(14, 14, 18, 0.85);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      overflow-x: auto;
+      flex-shrink: 0;
+      z-index: 10;
+    }
+
+    .thumb-item {
+      width: 38px;
+      height: 48px;
+      border-radius: 8px;
+      border: 2px solid rgba(255, 255, 255, 0.15);
+      background: #1c1c24;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      flex-shrink: 0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .thumb-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .thumb-item:hover {
+      border-color: rgba(245, 158, 11, 0.6);
+      color: #ffffff;
+    }
+
+    .thumb-item.active {
+      border-color: var(--accent);
+      background: rgba(245, 158, 11, 0.2);
+      color: #fbbf24;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+    }
+
+    .swipe-hint {
+      position: absolute;
+      bottom: 74px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 11px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.5);
+      pointer-events: none;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 4px 12px;
+      border-radius: 999px;
+      letter-spacing: 0.3px;
+    }
+
+    @media (max-width: 600px) {
+      .nav-btn {
+        width: 42px;
+        height: 42px;
+      }
+      .nav-btn.prev { left: 8px; }
+      .nav-btn.next { right: 8px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- Avatar / Brand Emblem -->
+  <div class="avatar-container">
+    <div class="avatar">
+      <div class="avatar-inner" id="avatar">
+        <!-- Default Logo Graphic: Fast Food Chicken & Bull Motif -->
+        <svg class="avatar-badge-svg" viewBox="0 0 48 48" fill="none">
+          <path d="M14 12C14 12 11 19 14 25C15.5 28 19 30 24 30C29 30 32.5 28 34 25C37 19 34 12 34 12C34 12 31 16 28 16C25.5 16 24 14 24 14C24 14 22.5 16 20 16C17 16 14 12 14 12Z" fill="url(#avatarGrad)" />
+          <path d="M19 15C19 12 21 8 24 7C27 8 29 12 29 15C29 17 27 18 24 18C21 18 19 17 19 15Z" fill="#ff5722"/>
+          <path d="M22 20H26L24 23L22 20Z" fill="#ffd166"/>
+          <path d="M10 16C7 11 9 4 10 3C11 7 14 10 16 12C14 13 12 14 10 16Z" fill="url(#avatarGrad)" />
+          <path d="M38 16C41 11 39 4 38 3C37 7 34 10 32 12C34 13 36 14 38 16Z" fill="url(#avatarGrad)" />
+          <circle cx="20" cy="22" r="1.5" fill="#111115"/>
+          <circle cx="28" cy="22" r="1.5" fill="#111115"/>
+          <path d="M24 33V41M18 41H30" stroke="url(#avatarGrad)" stroke-width="2.5" stroke-linecap="round"/>
+          <defs>
+            <linearGradient id="avatarGrad" x1="8" y1="3" x2="40" y2="43" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#fbbf24"/>
+              <stop offset="0.6" stop-color="#f59e0b"/>
+              <stop offset="1" stop-color="#ef4444"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <h1 id="businessName">
+    <span>Clucks n Bulls</span>
+    <span class="verified-badge" title="Official Profile">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+      </svg>
+    </span>
+  </h1>
+
+  <p class="tagline" id="tagline">Gourmet Burgers, Crispy Broast & Fast Food</p>
+
+  <div class="meta-badges">
+    <div class="meta-pill">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+      </svg>
+      <span>Gulshan-e-Hadeed, Karachi</span>
+    </div>
+    <div class="meta-pill">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+      </svg>
+      <span>Open 12:15 PM – 3:00 AM</span>
+    </div>
+  </div>
+
+  <!-- Ordered links container -->
+  <div class="links" id="links"></div>
+
+  <!-- Footer Powered by TapOne -->
+  <a class="footer" id="taponeFooter" href="https://tapone-store.vercel.app/" target="_blank" rel="noopener noreferrer">
+    Powered by <b>TapOne</b>
+  </a>
+</div>
+
+<!-- =========================================================================
+     MENU LIGHTBOX MODAL (8 IMAGES)
+     ========================================================================= -->
+<div class="menu-modal-backdrop" id="menuModal" role="dialog" aria-modal="true" aria-label="Menu Gallery">
+  <div class="menu-modal-header">
+    <div class="modal-title-group">
+      <span class="modal-title-text">Clucks n Bulls Menu</span>
+      <span class="modal-counter-badge" id="modalCounter">Page 1 of 8</span>
+    </div>
+    <div class="modal-actions">
+      <button class="modal-action-btn" id="zoomToggleBtn" title="Toggle Zoom" aria-label="Toggle Zoom">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          <line x1="11" y1="8" x2="11" y2="14"></line>
+          <line x1="8" y1="11" x2="14" y2="11"></line>
+        </svg>
+      </button>
+      <button class="modal-action-btn" id="closeModalBtn" title="Close Menu (Esc)" aria-label="Close Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="menu-viewport" id="menuViewport">
+    <button class="nav-btn prev" id="prevBtn" title="Previous Page (Left Arrow)" aria-label="Previous Page">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+
+    <div class="menu-slide" id="menuSlideContainer">
+      <!-- Populated via Javascript -->
+    </div>
+
+    <button class="nav-btn next" id="nextBtn" title="Next Page (Right Arrow)" aria-label="Next Page">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+
+    <div class="swipe-hint" id="swipeHint">Swipe or click thumbnails below</div>
+  </div>
+
+  <div class="menu-thumbnails-bar" id="thumbnailsBar">
+    <!-- 8 thumbnail buttons dynamically rendered -->
+  </div>
+</div>
+
+<script>
+  // =========================================================================
+  // CONFIGURATION: CLUCKS N BULLS
+  // Order:
+  // 1. WhatsApp: 03350334656
+  // 2. Instagram: https://www.instagram.com/clucksnbulls?obrf=em5uaTB1eGg1emho
+  // 3. TikTok: https://www.tiktok.com/@clucksnbulls?_r=1&_t=ZS-9APeAulvzVM
+  // 4. Facebook: https://www.facebook.com/share/19e95nGdXj/
+  // 5. Menu: 8 images viewer
+  // =========================================================================
+  const profile = {
+    businessName: "Clucks n Bulls",
+    tagline: "Gourmet Burgers, Crispy Broast & Fast Food",
+    photoUrl: "", // Optional custom avatar logo URL e.g. "images/logo.png"
+    links: {
+      whatsapp: "https://wa.me/923350334656",
+      instagram: "https://www.instagram.com/clucksnbulls?obrf=em5uaTB1eGg1emho",
+      tiktok: "https://www.tiktok.com/@clucksnbulls?_r=1&_t=ZS-9APeAulvzVM",
+      facebook: "https://www.facebook.com/share/19e95nGdXj/"
+    },
+    // Array of 8 menu images
+    // When you send the images, drop them in images/menu-1.jpg ... images/menu-8.jpg
+    menuImages: [
+      "images/menu-1.jpg",
+      "images/menu-2.jpg",
+      "images/menu-3.jpg",
+      "images/menu-4.jpg",
+      "images/menu-5.jpg",
+      "images/menu-6.jpg",
+      "images/menu-7.jpg",
+      "images/menu-8.jpg"
+    ]
+  };
+
+  const icons = {
+    whatsapp: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 20.16C10.57 20.16 9.12 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.16 12.05 20.16ZM16.57 14.45C16.32 14.32 15.1 13.72 14.87 13.64C14.65 13.56 14.48 13.52 14.32 13.77C14.15 14.01 13.68 14.56 13.53 14.73C13.39 14.89 13.24 14.91 13 14.79C12.75 14.66 11.96 14.41 11.02 13.57C10.29 12.92 9.79 12.11 9.67 11.89C9.55 11.67 9.66 11.55 9.78 11.43C9.89 11.32 10.03 11.14 10.15 11C10.27 10.86 10.31 10.75 10.39 10.59C10.47 10.42 10.43 10.28 10.37 10.16C10.31 10.03 9.81 8.81 9.6 8.31C9.4 7.82 9.19 7.88 9.04 7.88C8.89 7.87 8.73 7.87 8.56 7.87C8.4 7.87 8.13 7.93 7.9 8.18C7.68 8.42 7.05 9.01 7.05 10.22C7.05 11.43 7.93 12.6 8.05 12.76C8.17 12.93 9.78 15.4 12.24 16.46C12.83 16.71 13.28 16.86 13.64 16.98C14.23 17.16 14.77 17.14 15.2 17.07C15.68 17 16.67 16.47 16.88 15.89C17.08 15.31 17.08 14.82 17.02 14.71C16.96 14.61 16.82 14.57 16.57 14.45Z"/></svg>`,
+    instagram: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>`,
+    tiktok: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.89 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.34 0 .66.06.96.17V9.43a6.35 6.35 0 0 0-.96-.08A6.34 6.34 0 0 0 3.15 15.69 6.34 6.34 0 0 0 9.49 22a6.34 6.34 0 0 0 6.34-6.31V9.22c1.47.96 3.23 1.52 5.12 1.56V7.32c-.48 0-.94-.09-1.36-.26z"/></svg>`,
+    facebook: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>`,
+    menu: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path><line x1="8" y1="6" x2="16" y2="6"></line><line x1="8" y1="10" x2="16" y2="10"></line><line x1="8" y1="14" x2="12" y2="14"></line></svg>`
+  };
+
+  const arrowSvg = `<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>`;
+
+  const linksContainer = document.getElementById('links');
+
+  // 1. WhatsApp Button
+  const waBtn = document.createElement('a');
+  waBtn.href = profile.links.whatsapp;
+  waBtn.target = "_blank";
+  waBtn.rel = "noopener noreferrer";
+  waBtn.className = "btn whatsapp";
+  waBtn.innerHTML = `
+    <div class="btn-content">
+      <div class="icon-wrapper">${icons.whatsapp}</div>
+      <div class="btn-text-group">
+        <span class="btn-title">WhatsApp Order & Delivery</span>
+        <span class="btn-subtitle">0335-0334656 &bull; Chat & Order</span>
+      </div>
+    </div>
+    ${arrowSvg}
+  `;
+  linksContainer.appendChild(waBtn);
+
+  // 2. Instagram Button
+  const igBtn = document.createElement('a');
+  igBtn.href = profile.links.instagram;
+  igBtn.target = "_blank";
+  igBtn.rel = "noopener noreferrer";
+  igBtn.className = "btn instagram";
+  igBtn.innerHTML = `
+    <div class="btn-content">
+      <div class="icon-wrapper">${icons.instagram}</div>
+      <div class="btn-text-group">
+        <span class="btn-title">Instagram</span>
+        <span class="btn-subtitle">@clucksnbulls &bull; Deals & Updates</span>
+      </div>
+    </div>
+    ${arrowSvg}
+  `;
+  linksContainer.appendChild(igBtn);
+
+  // 3. TikTok Button
+  const ttBtn = document.createElement('a');
+  ttBtn.href = profile.links.tiktok;
+  ttBtn.target = "_blank";
+  ttBtn.rel = "noopener noreferrer";
+  ttBtn.className = "btn tiktok";
+  ttBtn.innerHTML = `
+    <div class="btn-content">
+      <div class="icon-wrapper">${icons.tiktok}</div>
+      <div class="btn-text-group">
+        <span class="btn-title">TikTok</span>
+        <span class="btn-subtitle">@clucksnbulls &bull; Videos & Reviews</span>
+      </div>
+    </div>
+    ${arrowSvg}
+  `;
+  linksContainer.appendChild(ttBtn);
+
+  // 4. Facebook Button
+  const fbBtn = document.createElement('a');
+  fbBtn.href = profile.links.facebook;
+  fbBtn.target = "_blank";
+  fbBtn.rel = "noopener noreferrer";
+  fbBtn.className = "btn facebook";
+  fbBtn.innerHTML = `
+    <div class="btn-content">
+      <div class="icon-wrapper">${icons.facebook}</div>
+      <div class="btn-text-group">
+        <span class="btn-title">Facebook</span>
+        <span class="btn-subtitle">Official Facebook Page</span>
+      </div>
+    </div>
+    ${arrowSvg}
+  `;
+  linksContainer.appendChild(fbBtn);
+
+  // 5. Menu Button (At last comes the menu which when clicked opens the 8 images)
+  const menuBtn = document.createElement('button');
+  menuBtn.type = "button";
+  menuBtn.className = "btn menu-btn";
+  menuBtn.innerHTML = `
+    <div class="btn-content">
+      <div class="icon-wrapper">${icons.menu}</div>
+      <div class="btn-text-group">
+        <span class="btn-title">View Full Menu <span class="badge-pill">8 Pages</span></span>
+        <span class="btn-subtitle">Burgers, Broast, Pizzas & More</span>
+      </div>
+    </div>
+    ${arrowSvg}
+  `;
+  linksContainer.appendChild(menuBtn);
+
+  // =========================================================================
+  // MENU LIGHTBOX GALLERY LOGIC
+  // =========================================================================
+  const menuModal = document.getElementById('menuModal');
+  const closeModalBtn = document.getElementById('closeModalBtn');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const modalCounter = document.getElementById('modalCounter');
+  const slideContainer = document.getElementById('menuSlideContainer');
+  const thumbnailsBar = document.getElementById('thumbnailsBar');
+  const zoomToggleBtn = document.getElementById('zoomToggleBtn');
+  const viewport = document.getElementById('menuViewport');
+
+  let currentIndex = 0;
+  const totalPages = profile.menuImages.length; // 8
+  let isZoomed = false;
+
+  // Open modal
+  menuBtn.addEventListener('click', () => {
+    menuModal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    renderSlide(currentIndex);
+  });
+
+  // Close modal
+  function closeModal() {
+    menuModal.classList.remove('open');
+    document.body.style.overflow = '';
+    isZoomed = false;
+  }
+  closeModalBtn.addEventListener('click', closeModal);
+
+  // Render Thumbnails
+  for (let i = 0; i < totalPages; i++) {
+    const thumb = document.createElement('div');
+    thumb.className = `thumb-item ${i === 0 ? 'active' : ''}`;
+    thumb.dataset.index = i;
+    thumb.innerHTML = `<span>${i + 1}</span>`;
+    
+    // Check if image exists
+    const testImg = new Image();
+    testImg.src = profile.menuImages[i];
+    testImg.onload = () => {
+      thumb.innerHTML = `<img src="${profile.menuImages[i]}" alt="Page ${i + 1}">`;
+    };
+
+    thumb.addEventListener('click', () => {
+      currentIndex = i;
+      renderSlide(currentIndex);
+    });
+    thumbnailsBar.appendChild(thumb);
+  }
+
+  // Update slide display
+  function renderSlide(index) {
+    isZoomed = false;
+    modalCounter.textContent = `Page ${index + 1} of ${totalPages}`;
+
+    // Highlight thumbnail
+    document.querySelectorAll('.thumb-item').forEach((item, idx) => {
+      if (idx === index) {
+        item.classList.add('active');
+        item.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      } else {
+        item.classList.remove('active');
+      }
+    });
+
+    slideContainer.innerHTML = '';
+
+    const imgSrc = profile.menuImages[index];
+    const img = new Image();
+    img.src = imgSrc;
+    img.className = 'menu-img';
+    img.alt = `Clucks n Bulls Menu - Page ${index + 1}`;
+
+    img.onload = () => {
+      slideContainer.innerHTML = '';
+      slideContainer.appendChild(img);
+      img.addEventListener('click', toggleZoom);
+    };
+
+    img.onerror = () => {
+      slideContainer.innerHTML = `
+        <div class="menu-placeholder-card">
+          <div class="page-num-circle">${index + 1}</div>
+          <div class="card-heading">Menu Page ${index + 1} of ${totalPages}</div>
+          <div class="card-sub">Waiting for your 8 menu photos. Send them in chat to see them live here!</div>
+          <div class="filename-pill">${profile.menuImages[index]}</div>
+        </div>
+      `;
+    };
+  }
+
+  function toggleZoom() {
+    const img = slideContainer.querySelector('.menu-img');
+    if (!img) return;
+    isZoomed = !isZoomed;
+    if (isZoomed) {
+      img.classList.add('zoomed');
+    } else {
+      img.classList.remove('zoomed');
+    }
+  }
+
+  zoomToggleBtn.addEventListener('click', toggleZoom);
+
+  // Next / Prev actions
+  function goToNext() {
+    currentIndex = (currentIndex + 1) % totalPages;
+    renderSlide(currentIndex);
+  }
+
+  function goToPrev() {
+    currentIndex = (currentIndex - 1 + totalPages) % totalPages;
+    renderSlide(currentIndex);
+  }
+
+  nextBtn.addEventListener('click', goToNext);
+  prevBtn.addEventListener('click', goToPrev);
+
+  // Keyboard navigation
+  window.addEventListener('keydown', (e) => {
+    if (!menuModal.classList.contains('open')) return;
+    if (e.key === 'Escape') closeModal();
+    if (e.key === 'ArrowRight') goToNext();
+    if (e.key === 'ArrowLeft') goToPrev();
+  });
+
+  // Touch Swipe for Mobile
+  let touchStartX = 0;
+  let touchEndX = 0;
+  viewport.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  viewport.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleGesture();
+  }, { passive: true });
+
+  function handleGesture() {
+    const swipeThreshold = 50;
+    if (touchEndX < touchStartX - swipeThreshold) {
+      goToNext();
+    } else if (touchEndX > touchStartX + swipeThreshold) {
+      goToPrev();
+    }
+  }
+</script>
+</body>
+</html>
