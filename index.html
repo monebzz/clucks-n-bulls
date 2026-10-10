@@ -8,6 +8,8 @@
   <meta http-equiv="Expires" content="0">
   <title>Clucks n Bulls | Official Links & Digital Menu</title>
   <meta name="description" content="Official links and complete 8-page digital menu for Clucks n Bulls fast-food restaurant in Gulshan-e-Hadeed, Karachi. Order via WhatsApp, follow on Instagram, TikTok & Facebook.">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="apple-touch-icon" href="images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -96,12 +98,12 @@
     }
 
     .avatar {
-      width: 106px;
-      height: 106px;
+      width: 112px;
+      height: 112px;
       border-radius: 50%;
       background: linear-gradient(145deg, #1c1c22, #0d0d10);
       position: relative;
-      padding: 3px;
+      padding: 3.5px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -129,7 +131,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #111115;
+      background: #ffffff;
     }
 
     .avatar-inner img {
@@ -137,12 +139,6 @@
       height: 100%;
       object-fit: cover;
       display: block;
-    }
-
-    .avatar-badge-svg {
-      width: 60px;
-      height: 60px;
-      color: var(--accent);
     }
 
     h1 {
@@ -718,20 +714,7 @@
       line-height: 1.1;
     }
 
-    .swipe-hint {
-      position: absolute;
-      bottom: 74px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 11px;
-      font-weight: 600;
-      color: rgba(255, 255, 255, 0.55);
-      pointer-events: none;
-      background: rgba(0, 0, 0, 0.65);
-      padding: 4px 14px;
-      border-radius: 999px;
-      letter-spacing: 0.3px;
-    }
+
 
     @media (max-width: 600px) {
       .nav-btn {
@@ -754,24 +737,7 @@
   <div class="avatar-container">
     <div class="avatar">
       <div class="avatar-inner" id="avatar">
-        <!-- Logo Graphic: Fast Food Chicken & Bull Motif -->
-        <svg class="avatar-badge-svg" viewBox="0 0 48 48" fill="none">
-          <path d="M14 12C14 12 11 19 14 25C15.5 28 19 30 24 30C29 30 32.5 28 34 25C37 19 34 12 34 12C34 12 31 16 28 16C25.5 16 24 14 24 14C24 14 22.5 16 20 16C17 16 14 12 14 12Z" fill="url(#avatarGrad)" />
-          <path d="M19 15C19 12 21 8 24 7C27 8 29 12 29 15C29 17 27 18 24 18C21 18 19 17 19 15Z" fill="#ff5722"/>
-          <path d="M22 20H26L24 23L22 20Z" fill="#ffd166"/>
-          <path d="M10 16C7 11 9 4 10 3C11 7 14 10 16 12C14 13 12 14 10 16Z" fill="url(#avatarGrad)" />
-          <path d="M38 16C41 11 39 4 38 3C37 7 34 10 32 12C34 13 36 14 38 16Z" fill="url(#avatarGrad)" />
-          <circle cx="20" cy="22" r="1.5" fill="#111115"/>
-          <circle cx="28" cy="22" r="1.5" fill="#111115"/>
-          <path d="M24 33V41M18 41H30" stroke="url(#avatarGrad)" stroke-width="2.5" stroke-linecap="round"/>
-          <defs>
-            <linearGradient id="avatarGrad" x1="8" y1="3" x2="40" y2="43" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#fbbf24"/>
-              <stop offset="0.6" stop-color="#f59e0b"/>
-              <stop offset="1" stop-color="#ef4444"/>
-            </linearGradient>
-          </defs>
-        </svg>
+        <img src="images/logo.png" alt="Clucks n Bulls" width="112" height="112">
       </div>
     </div>
   </div>
@@ -862,7 +828,7 @@
       </svg>
     </button>
 
-    <div class="swipe-hint" id="swipeHint">Swipe or use arrows to view all 8 pages</div>
+
   </div>
 
   <div class="menu-thumbnails-bar" id="thumbnailsBar">
@@ -883,7 +849,7 @@
   const profile = {
     businessName: "Clucks n Bulls",
     tagline: "Gourmet Burgers, Crispy Broast & Fast Food",
-    photoUrl: "", 
+    photoUrl: "images/logo.png", 
     links: {
       whatsapp: "https://wa.me/923350334656",
       instagram: "https://www.instagram.com/clucksnbulls?obrf=em5uaTB1eGg1emho",
